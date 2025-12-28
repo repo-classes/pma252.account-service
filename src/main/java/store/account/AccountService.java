@@ -74,6 +74,7 @@ public class AccountService {
     }
 
     private String hash(String pass) {
+        looger.debug("calculing the hash");
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] encodedHash = digest.digest(
